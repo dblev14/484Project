@@ -403,24 +403,24 @@ public partial class SendReward : System.Web.UI.Page
 
 
 
-                //// Your Account SID from twilio.com/console
-                //var accountSid = "ACf491236fe8c39d4d1801cdd3de3788a4";
-                //// Your Auth Token from twilio.com/console
-                //var authToken = "f32769fd46b8388451c4c25dba81ae39";
+                // Your Account SID from twilio.com/console
+                var accountSid = "ACf491236fe8c39d4d1801cdd3de3788a4";
+                // Your Auth Token from twilio.com/console
+                var authToken = "f32769fd46b8388451c4c25dba81ae39";
 
-                //TwilioClient.Init(accountSid, authToken);
+                TwilioClient.Init(accountSid, authToken);
 
-                //try
-                //{
-                //    var message = MessageResource.Create(
-                //        to: new PhoneNumber("+1" + number),
-                //        from: new PhoneNumber("+12407700506"),
-                //        body: senderName + " has Rewarded you for " + txtRewardReason.Text.ToLower() + " for the amount of $" + dropRewardAmount.SelectedValue);
-                //}
-                //catch (Exception ex)
-                //{
-                //    lblStatus.Text = "Message has been Sent!";
-                //}
+                try
+                {
+                    var message = MessageResource.Create(
+                        to: new PhoneNumber("+1" + number),
+                        from: new PhoneNumber("+12407700506"),
+                        body: senderName + " has Rewarded you for " + txtRewardReason.Text.ToLower() + " for the amount of $" + dropRewardAmount.SelectedValue);
+                }
+                catch (Exception ex)
+                {
+                   lblStatus.Text = "Message has been Sent!";
+                }
 
 
                 clear();
